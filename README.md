@@ -1,13 +1,12 @@
 <div align="center">
 
 # ALPHA-AM  
-## Active Learning for Process-Optimized High-Performance Alloy Discovery in Additive Manufacturing
+## Active Learning for Process-Optimized High-Potential Alloy Discovery in Additive Manufacturing
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 [![Status](https://img.shields.io/badge/Status-Reproducible-success.svg)]()
 
-**Physics-informed active learning framework for accelerated discovery of printable, high-performance alloys for additive manufacturing**
+**Physics-informed active learning framework for accelerated discovery of printable, high-potential alloys for additive manufacturing**
 
 ---
 
@@ -47,30 +46,22 @@ Contains the complete **27-point experimental dataset** used for initial model d
 
 **Included as:**
 ```text
-data/initial_training_dataset.csv
-data/featurized_dataset.csv
+gp_features.csv
 ```
-
-> The featurized dataset is provided explicitly to ensure direct reproducibility of model training and feature selection.
 
 ---
 
 ## Active Learning Generations
 Includes all six active learning generations proposed and experimentally evaluated through ALPHA-AM:
 
-- Generation 1–6 candidate compositions  
-- Predicted acquisition rankings  
+- Generation 1–6 candidate compositions   
 - Experimental validation results  
 - Hardness responses  
-- Crack outcomes
 
 **Included as:**
 ```text
-data/alpha_am_generations.csv
+Hardness_Repo.csv
 ```
-
-These compositions represent the alloy candidates discovered through the ALPHA-AM acquisition strategy.
-
 ---
 
 ## Machine Learning Framework
@@ -90,14 +81,6 @@ Gaussian Process Classification (GPC) for crack susceptibility
 - Probabilistic crack-free likelihood  
 - Safety constraint estimation  
 - Manufacturability screening
-
-Example training notebooks and scripts are provided in:
-
-```text
-models/
-notebooks/
-```
-
 ---
 
 ## Active Learning Acquisition Strategy
@@ -122,11 +105,7 @@ This balances:
 - uncertainty-driven exploration  
 - manufacturability constraints
 
-Acquisition examples and optimization workflows are included in:
-
-```text
-active_learning/
-```
+Please note, acquisition strategies will vary based on the users task. 
 
 ---
 
@@ -138,6 +117,11 @@ Use the 27-alloy featurized dataset to train:
 - GPR hardness surrogate  
 - GPC cracking classifier
 
+Please follow the code outlined in the included jupyter notebook
+
+```text
+gp_training.ipynb
+```
 ---
 
 ## 2. Run active learning acquisition
@@ -165,8 +149,6 @@ to compare model-selected candidates with experimentally validated alloy outcome
 
 # Methodological Notes
 Detailed methodology, experimental procedures, descriptor definitions, and feature selection rationale are documented in the main manuscript and Supplementary Information.
-
-This repository complements those materials by providing:
 
 ---
 
