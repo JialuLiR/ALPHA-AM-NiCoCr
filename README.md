@@ -104,16 +104,17 @@ notebooks/
 
 ALPHA-AM uses **Constrained Expected Improvement (CEI)** as the acquisition function:
 
-$begin:math:display$
-CEI\(x\)\=P\_\{safe\}\(x\)\\Big\[\(\\mu\(x\)\-f\_\{best\}\)\\Phi\(Z\)\+\\sigma\(x\)\\phi\(Z\)\\Big\]
-$end:math:display$
+```math
+CEI(x)=P_{safe}(x)\Big[(\mu(x)-f_{best})\Phi(Z)+\sigma(x)\phi(Z)\Big]
+```
 
 where:
 
-- $begin:math:text$P\_\{safe\}\(x\)$end:math:text$ = probability of crack-free printing  
-- $begin:math:text$\\mu\(x\)$end:math:text$ = predicted hardness  
-- $begin:math:text$\\sigma\(x\)$end:math:text$ = predictive uncertainty  
-- $begin:math:text$f\_\{best\}$end:math:text$ = best observed hardness
+- $P_{safe}(x)$ = probability of crack-free printing  
+- $\mu(x)$ = predicted hardness  
+- $\sigma(x)$ = predictive uncertainty  
+- $f_{best}$ = best observed hardness  
+- $Z=\dfrac{\mu(x)-f_{best}}{\sigma(x)}$
 
 This balances:
 
